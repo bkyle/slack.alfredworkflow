@@ -67,7 +67,7 @@
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Markdown</string>
+				<string>Markdown Conversion Complete</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -75,6 +75,29 @@
 			<string>8D6490C1-5A55-43A1-899D-D8A1F375E655</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>pbpaste | tee | ./slack.py $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C414F766-D528-4C7A-A5CD-855E4B067AFA</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -108,29 +131,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>pbpaste | tee | ./slack.py $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>C414F766-D528-4C7A-A5CD-855E4B067AFA</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -155,30 +155,30 @@
 		<key>00917AA3-CFB3-4B2B-8827-2344B0F12738</key>
 		<dict>
 			<key>xpos</key>
-			<integer>100</integer>
+			<integer>130</integer>
 			<key>ypos</key>
-			<integer>160</integer>
+			<integer>285</integer>
 		</dict>
 		<key>8D6490C1-5A55-43A1-899D-D8A1F375E655</key>
 		<dict>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>215</integer>
 		</dict>
 		<key>C414F766-D528-4C7A-A5CD-855E4B067AFA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>315</integer>
 			<key>ypos</key>
-			<integer>160</integer>
+			<integer>285</integer>
 		</dict>
 		<key>C83502C2-2FBE-4B2F-A9A8-E4AA03492636</key>
 		<dict>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>380</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
