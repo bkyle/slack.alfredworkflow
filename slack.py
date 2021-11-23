@@ -134,9 +134,6 @@ class TextParser(Parser):
                 message = Message(sender, time)
                 messages.append(message)
             elif re.match(r"^\d+:\d+$", line):
-                sender = None
-                if message:
-                    sender = message["sender"]
                 time = line
                 message = Message.continuation(message, timestamp=time)
                 messages.append(message)
