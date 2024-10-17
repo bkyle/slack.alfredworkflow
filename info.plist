@@ -8,19 +8,6 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>00917AA3-CFB3-4B2B-8827-2344B0F12738</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C414F766-D528-4C7A-A5CD-855E4B067AFA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>C414F766-D528-4C7A-A5CD-855E4B067AFA</key>
 		<array>
 			<dict>
@@ -33,9 +20,12 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>CC701566-0009-4443-B449-9CE76DC72184</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C83502C2-2FBE-4B2F-A9A8-E4AA03492636</string>
+				<string>C414F766-D528-4C7A-A5CD-855E4B067AFA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -55,6 +45,27 @@
 	<string>Slack</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>md2slack</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>md2slack</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CC701566-0009-4443-B449-9CE76DC72184</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -84,7 +95,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>pbpaste | tee | ./slack.py $1</string>
+				<string>pbpaste | ./md2slack.py | pbcopy</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -99,88 +110,35 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>fixedorder</key>
-				<false/>
-				<key>items</key>
-				<string>[{"title":"-&gt; Markdown","arg":"slack2md","subtitle":"Format text from Slack as Markdown"},{"title":"-&gt; Slackdown","arg":"md2slack","subtitle":"Convert Markdown to Slack formatting"}]</string>
-				<key>keyword</key>
-				<string>qs</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Convert transcripts from a conversation in Slack to Markdown blockquotes and vice versa</string>
-				<key>title</key>
-				<string>Slack &lt;-&gt; Markdown</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>00917AA3-CFB3-4B2B-8827-2344B0F12738</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>C83502C2-2FBE-4B2F-A9A8-E4AA03492636</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>00917AA3-CFB3-4B2B-8827-2344B0F12738</key>
-		<dict>
-			<key>xpos</key>
-			<integer>130</integer>
-			<key>ypos</key>
-			<integer>285</integer>
-		</dict>
 		<key>8D6490C1-5A55-43A1-899D-D8A1F375E655</key>
 		<dict>
 			<key>xpos</key>
-			<integer>510</integer>
+			<real>780</real>
 			<key>ypos</key>
-			<integer>215</integer>
+			<real>245</real>
 		</dict>
 		<key>C414F766-D528-4C7A-A5CD-855E4B067AFA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>315</integer>
+			<real>585</real>
 			<key>ypos</key>
-			<integer>285</integer>
+			<real>315</real>
 		</dict>
-		<key>C83502C2-2FBE-4B2F-A9A8-E4AA03492636</key>
+		<key>CC701566-0009-4443-B449-9CE76DC72184</key>
 		<dict>
 			<key>xpos</key>
-			<integer>505</integer>
+			<real>430</real>
 			<key>ypos</key>
-			<integer>380</integer>
+			<real>160</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
